@@ -1,9 +1,16 @@
 package at.htl.vehicle.vehicle;
 
-public class Vehicle {
+import javax.persistence.*;
 
+@Entity
+@Table(name="X_VEHICLE")
+public class Vehicle {
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "V_ID")
     private Long id;
+    @Column(name = "V_MODEL", nullable = false)
     private String model;
+    @Column(name="V_BRAND", nullable = false)
     private String brand;
 
     //region constructors
@@ -42,7 +49,6 @@ public class Vehicle {
         this.id = id;
     }
     //endregion
-
 
     @Override
     public String toString() {
