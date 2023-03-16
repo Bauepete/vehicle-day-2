@@ -8,3 +8,6 @@ GET http://localhost:8080/persons/1
 
 ### find vehicle by id
 GET localhost:8080/vehicles/
+
+### find all rentals
+GET localhost:8080/rentals

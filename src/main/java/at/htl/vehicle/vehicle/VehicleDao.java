@@ -19,4 +19,8 @@ public class VehicleDao {
         var query = entityManager.createQuery("select v from Vehicle v", Vehicle.class);
         return query.getResultList();
     }
+
+    public void persist(Vehicle vehicle) {
+        entityManager.persist(vehicle);
+    }
 }
