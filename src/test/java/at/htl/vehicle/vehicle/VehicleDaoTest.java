@@ -32,7 +32,6 @@ class VehicleDaoTest {
         QuarkusTransaction.commit();
 
         var table = new Table(dataSource, "X_VEHICLE");
-        // output(table).toConsole();
         assertThat(table).exists().hasNumberOfRows(1);
     }
 }

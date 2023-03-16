@@ -14,7 +14,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class PersonTest {
     @Test
     void itShouldHaveNameSusi_GivenNameSusiWhenConstructed() {
-        var person = new Person("Susi", LocalDate.of(2000, Month.APRIL, 10));
+        final LocalDate anyBirthday = LocalDate.of(2000, Month.APRIL, 10);
+        var person = new Person("Susi", anyBirthday);
         assertThat(person.getName()).isEqualTo("Susi");
     }
 }
